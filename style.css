@@ -3,19 +3,19 @@
    ============================================ */
 
 :root {
-  --navy: #1B2C6E;
-  --navy-dark: #131f52;
-  --turquoise: #2EC8C8;
-  --turquoise-light: #e6f9f9;
-  --turquoise-mid: #b3ecec;
-  --bg-light: #F4F7FB;
+  --navy: #1a1a1a;
+  --navy-dark: #0d0d0d;
+  --turquoise: #F07520;
+  --turquoise-light: #FFF0E0;
+  --turquoise-mid: #FFCF9E;
+  --bg-light: #F5F5F5;
   --white: #ffffff;
-  --text-dark: #1a1a2e;
+  --text-dark: #1a1a1a;
   --text-gray: #6b7280;
   --text-light: #9ca3af;
   --border: #e5e7eb;
-  --shadow: 0 4px 20px rgba(27, 44, 110, 0.08);
-  --shadow-hover: 0 8px 32px rgba(27, 44, 110, 0.16);
+  --shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  --shadow-hover: 0 8px 32px rgba(0, 0, 0, 0.16);
   --radius: 12px;
   --radius-sm: 8px;
 }
@@ -220,7 +220,7 @@ body {
 
 /* ============ HERO ============ */
 .hero {
-  background: linear-gradient(135deg, var(--navy) 0%, #243580 60%, #1e3a8a 100%);
+  background: linear-gradient(135deg, #1a1a1a 0%, #2a2a2a 60%, #1f1f1f 100%);
   padding: 90px 0;
   position: relative;
   overflow: hidden;
@@ -690,6 +690,48 @@ body {
 .footer-bottom p {
   font-size: 13px;
   color: rgba(255, 255, 255, 0.4);
+}
+
+/* ============ MARKALAR ============ */
+.brands-bar {
+  background: var(--navy);
+  padding: 24px 0;
+  border-bottom: 3px solid var(--turquoise);
+}
+
+.brands-bar .container {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+  flex-wrap: wrap;
+}
+
+.brands-label {
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255,255,255,0.45);
+  white-space: nowrap;
+}
+
+.brands-list {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.brand-item {
+  font-size: 14px;
+  font-weight: 700;
+  color: rgba(255,255,255,0.85);
+  letter-spacing: 0.5px;
+}
+
+.brand-sep {
+  color: var(--turquoise);
+  font-size: 16px;
 }
 
 /* ============ RESPONSIVE ============ */
