@@ -39,7 +39,7 @@
     <div class="container hero-inner">
       <div class="hero-text">
         <span class="hero-badge">Güvenilir Oto Yedek Parça</span>
-        <h1>Aracınız İçin<br /><span class="highlight">Doğru Parça,</span><br />Hızlı Çözüm</h1>
+        <h1>Aracınız İçin<br /><span class="highlight"><span id="typing-text"></span><span class="cursor">|</span></span><br />Hızlı Çözüm</h1>
         <p>Otomotiv yedek parça ve mekanik hizmetlerinde kaliteli ürünler, uygun fiyatlar ve uzman kadromuzla yanınızdayız.</p>
         <div class="hero-actions">
           <a href="#kategoriler" class="btn-primary">Parça Kataloğu</a>
@@ -49,17 +49,17 @@
       <div class="hero-visual">
         <div class="hero-card">
           <div class="hero-stat">
-            <span class="stat-num">10+</span>
+            <span class="stat-num" data-target="10" data-suffix="+">0</span>
             <span class="stat-label">Yıl Deneyim</span>
           </div>
           <div class="hero-divider"></div>
           <div class="hero-stat">
-            <span class="stat-num">5000+</span>
+            <span class="stat-num" data-target="5000" data-suffix="+">0</span>
             <span class="stat-label">Parça Çeşidi</span>
           </div>
           <div class="hero-divider"></div>
           <div class="hero-stat">
-            <span class="stat-num">%100</span>
+            <span class="stat-num" data-target="100" data-prefix="%">0</span>
             <span class="stat-label">Orijinal & Muadil</span>
           </div>
         </div>
@@ -67,30 +67,34 @@
     </div>
   </section>
 
-  <!-- MARKALAR -->
+  <!-- MARKALAR MARQUEE -->
   <section class="brands-bar">
-    <div class="container">
+    <div class="brands-label-wrap">
       <p class="brands-label">Uzman olduğumuz markalar</p>
-      <div class="brands-list">
-        <span class="brand-item">BMW</span>
-        <span class="brand-sep">·</span>
-        <span class="brand-item">Audi</span>
-        <span class="brand-sep">·</span>
-        <span class="brand-item">Volkswagen</span>
-        <span class="brand-sep">·</span>
-        <span class="brand-item">Skoda</span>
-        <span class="brand-sep">·</span>
-        <span class="brand-item">Opel</span>
-        <span class="brand-sep">·</span>
-        <span class="brand-item">Mercedes</span>
-        <span class="brand-sep">·</span>
-        <span class="brand-item">Porsche</span>
-        <span class="brand-sep">·</span>
-        <span class="brand-item">Land Rover</span>
-        <span class="brand-sep">·</span>
-        <span class="brand-item">Cupra</span>
-        <span class="brand-sep">·</span>
-        <span class="brand-item">Mini</span>
+    </div>
+    <div class="marquee-wrapper">
+      <div class="marquee-track">
+        <span class="brand-item">BMW</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Audi</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Volkswagen</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Skoda</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Opel</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Mercedes</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Porsche</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Land Rover</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Cupra</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Mini</span><span class="brand-sep">◆</span>
+        <!-- duplicate for seamless loop -->
+        <span class="brand-item">BMW</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Audi</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Volkswagen</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Skoda</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Opel</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Mercedes</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Porsche</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Land Rover</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Cupra</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Mini</span><span class="brand-sep">◆</span>
       </div>
     </div>
   </section>
@@ -104,49 +108,49 @@
       </div>
       <div class="grid-4">
 
-        <div class="category-card">
+        <div class="category-card scroll-hidden">
           <div class="cat-icon">🔧</div>
           <h3>Motor Parçaları</h3>
           <p>Piston, segman, supap, conta, krank ve tüm motor ekipmanları</p>
         </div>
 
-        <div class="category-card">
+        <div class="category-card scroll-hidden">
           <div class="cat-icon">🛑</div>
           <h3>Fren Sistemi</h3>
           <p>Balata, disk, kaliper, fren hortumu ve ABS bileşenleri</p>
         </div>
 
-        <div class="category-card">
+        <div class="category-card scroll-hidden">
           <div class="cat-icon">🚗</div>
           <h3>Süspansiyon</h3>
           <p>Amortisör, yay, rot başı, viraj demiri ve rulman takımları</p>
         </div>
 
-        <div class="category-card">
+        <div class="category-card scroll-hidden">
           <div class="cat-icon">⚡</div>
           <h3>Elektrik & Elektronik</h3>
           <p>Marş, alternator, sensörler, sigorta kutusu ve kablaj setleri</p>
         </div>
 
-        <div class="category-card">
+        <div class="category-card scroll-hidden">
           <div class="cat-icon">💧</div>
           <h3>Soğutma Sistemi</h3>
           <p>Radyatör, termostat, su pompası, hortum ve kalorifer radyatörü</p>
         </div>
 
-        <div class="category-card">
+        <div class="category-card scroll-hidden">
           <div class="cat-icon">🔩</div>
           <h3>Aktarma Organları</h3>
           <p>Debriyaj, şanzıman parçaları, diferansiyel ve kardanşaft</p>
         </div>
 
-        <div class="category-card">
+        <div class="category-card scroll-hidden">
           <div class="cat-icon">💨</div>
           <h3>Egzoz & Emisyon</h3>
           <p>Katalitik konvertör, egzoz borusu, oksijen sensörü ve susturucu</p>
         </div>
 
-        <div class="category-card">
+        <div class="category-card scroll-hidden">
           <div class="cat-icon">🪟</div>
           <h3>Kaporta & Cam</h3>
           <p>Ön/arka cam, ayna, tampon, kaput ve kapı parçaları</p>
@@ -165,19 +169,19 @@
       </div>
       <div class="grid-3">
 
-        <div class="service-card">
+        <div class="service-card scroll-hidden">
           <div class="service-num">01</div>
           <h3>Parça Temin & Satış</h3>
           <p>Orijinal ve muadil yedek parça seçenekleriyle her bütçeye uygun çözümler sunuyoruz.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card scroll-hidden">
           <div class="service-num">02</div>
           <h3>Parça Uyumluluk Danışmanlığı</h3>
           <p>Aracınızın markası, modeli ve yılına göre doğru parçayı birlikte belirliyoruz.</p>
         </div>
 
-        <div class="service-card">
+        <div class="service-card scroll-hidden">
           <div class="service-num">03</div>
           <h3>Hızlı Tedarik</h3>
           <p>Stokta olmayan parçaları kısa sürede temin ediyor, sizi bilgilendiriyoruz.</p>
@@ -195,22 +199,22 @@
         <p>Müşterilerimizin bize güvenme nedenleri</p>
       </div>
       <div class="grid-4">
-        <div class="why-card">
+        <div class="why-card scroll-hidden">
           <div class="why-icon">✅</div>
           <h4>Garantili Ürünler</h4>
           <p>Sattığımız tüm parçalar garantili ve kalite kontrollüdür.</p>
         </div>
-        <div class="why-card">
+        <div class="why-card scroll-hidden">
           <div class="why-icon">💰</div>
           <h4>Rekabetçi Fiyat</h4>
           <p>Piyasanın en uygun fiyatlarıyla kaliteli parça ulaştırıyoruz.</p>
         </div>
-        <div class="why-card">
+        <div class="why-card scroll-hidden">
           <div class="why-icon">🚀</div>
           <h4>Hızlı Servis</h4>
           <p>Sizi bekletmeden hızlı temin ve teslimat yapıyoruz.</p>
         </div>
-        <div class="why-card">
+        <div class="why-card scroll-hidden">
           <div class="why-icon">🤝</div>
           <h4>Uzman Kadro</h4>
           <p>Deneyimli ekibimiz ile her konuda yanınızdayız.</p>
@@ -340,25 +344,103 @@
   </footer>
 
   <script>
+    /* ── Hamburger ── */
     function toggleMenu() {
-      const menu = document.getElementById('mobileMenu');
-      menu.classList.toggle('open');
+      document.getElementById('mobileMenu').classList.toggle('open');
     }
 
+    /* ── Form ── */
     function handleForm(e) {
       e.preventDefault();
       document.getElementById('formNote').textContent = '✅ Mesajınız alındı. En kısa sürede sizi arayacağız!';
       e.target.reset();
     }
 
-    // Smooth scroll for older browsers
-    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-      anchor.addEventListener('click', function(e) {
+    /* ── Smooth scroll ── */
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', function(e) {
         e.preventDefault();
-        const target = document.querySelector(this.getAttribute('href'));
-        if (target) target.scrollIntoView({ behavior: 'smooth' });
+        const t = document.querySelector(this.getAttribute('href'));
+        if (t) t.scrollIntoView({ behavior: 'smooth' });
       });
     });
+
+    /* ── 1. SAYAÇ ANİMASYONU ── */
+    function animateCounter(el) {
+      const target = parseInt(el.dataset.target);
+      const suffix = el.dataset.suffix || '';
+      const prefix = el.dataset.prefix || '';
+      const duration = 1800;
+      const step = 16;
+      const totalSteps = duration / step;
+      let current = 0;
+      const increment = target / totalSteps;
+      const timer = setInterval(() => {
+        current += increment;
+        if (current >= target) {
+          current = target;
+          clearInterval(timer);
+        }
+        el.textContent = prefix + Math.floor(current).toLocaleString('tr') + suffix;
+      }, step);
+    }
+
+    const counterObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          animateCounter(entry.target);
+          counterObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.5 });
+
+    document.querySelectorAll('.stat-num[data-target]').forEach(el => counterObserver.observe(el));
+
+    /* ── 2. SCROLL-IN KARTLAR ── */
+    const scrollObserver = new IntersectionObserver((entries) => {
+      entries.forEach((entry, i) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => {
+            entry.target.classList.add('scroll-visible');
+          }, (entry.target.dataset.delay || 0));
+          scrollObserver.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+
+    document.querySelectorAll('.scroll-hidden').forEach((el, i) => {
+      el.dataset.delay = (i % 4) * 100;
+      scrollObserver.observe(el);
+    });
+
+    /* ── 3. HERO TYPING EFEKTİ ── */
+    const words = ['Doğru Parça,', 'Motor Parçası,', 'Fren Balata,', 'Süspansiyon,', 'Elektrik Parçası,'];
+    let wi = 0, ci = 0, deleting = false;
+    const typingEl = document.getElementById('typing-text');
+
+    function type() {
+      const word = words[wi];
+      if (!deleting) {
+        typingEl.textContent = word.slice(0, ++ci);
+        if (ci === word.length) {
+          deleting = true;
+          setTimeout(type, 1800);
+          return;
+        }
+      } else {
+        typingEl.textContent = word.slice(0, --ci);
+        if (ci === 0) {
+          deleting = false;
+          wi = (wi + 1) % words.length;
+        }
+      }
+      setTimeout(type, deleting ? 60 : 100);
+    }
+    type();
+
+    /* ── 4. KATEGORİ İKON HOVER (CSS ile — JS gerekmez) ── */
+
+    /* ── 5. MARQUEE (CSS ile — JS gerekmez) ── */
   </script>
 
 </body>

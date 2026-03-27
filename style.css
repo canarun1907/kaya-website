@@ -692,46 +692,123 @@ body {
   color: rgba(255, 255, 255, 0.4);
 }
 
-/* ============ MARKALAR ============ */
+/* ============ MARKALAR MARQUEE ============ */
 .brands-bar {
   background: var(--navy);
-  padding: 24px 0;
   border-bottom: 3px solid var(--turquoise);
+  overflow: hidden;
 }
 
-.brands-bar .container {
-  display: flex;
-  align-items: center;
-  gap: 24px;
-  flex-wrap: wrap;
+.brands-label-wrap {
+  padding: 14px 24px 0;
+  text-align: center;
 }
 
 .brands-label {
-  font-size: 12px;
+  font-size: 11px;
   font-weight: 600;
   text-transform: uppercase;
-  letter-spacing: 1px;
-  color: rgba(255,255,255,0.45);
-  white-space: nowrap;
+  letter-spacing: 1.5px;
+  color: rgba(255,255,255,0.35);
 }
 
-.brands-list {
+.marquee-wrapper {
+  overflow: hidden;
+  padding: 14px 0;
+  position: relative;
+}
+
+.marquee-wrapper::before,
+.marquee-wrapper::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 2;
+}
+
+.marquee-wrapper::before {
+  left: 0;
+  background: linear-gradient(to right, var(--navy), transparent);
+}
+
+.marquee-wrapper::after {
+  right: 0;
+  background: linear-gradient(to left, var(--navy), transparent);
+}
+
+.marquee-track {
   display: flex;
   align-items: center;
-  gap: 10px;
-  flex-wrap: wrap;
+  gap: 20px;
+  width: max-content;
+  animation: marquee 22s linear infinite;
+}
+
+.marquee-track:hover {
+  animation-play-state: paused;
+}
+
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
 }
 
 .brand-item {
-  font-size: 14px;
-  font-weight: 700;
-  color: rgba(255,255,255,0.85);
-  letter-spacing: 0.5px;
+  font-size: 15px;
+  font-weight: 800;
+  color: rgba(255,255,255,0.8);
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  white-space: nowrap;
+  transition: color 0.2s;
+}
+
+.brand-item:hover {
+  color: var(--turquoise);
 }
 
 .brand-sep {
   color: var(--turquoise);
-  font-size: 16px;
+  font-size: 10px;
+  opacity: 0.6;
+}
+
+/* ============ SCROLL-IN ANİMASYON ============ */
+.scroll-hidden {
+  opacity: 0;
+  transform: translateY(32px);
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.scroll-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ============ TYPING CURSOR ============ */
+.cursor {
+  display: inline-block;
+  color: var(--turquoise);
+  animation: blink 0.75s step-end infinite;
+  font-weight: 300;
+  margin-left: 2px;
+}
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0; }
+}
+
+/* ============ KATEGORİ İKON HOVER ============ */
+.category-card .cat-icon {
+  display: inline-block;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+
+.category-card:hover .cat-icon {
+  transform: scale(1.35) rotate(-8deg);
 }
 
 /* ============ RESPONSIVE ============ */
