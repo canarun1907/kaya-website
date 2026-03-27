@@ -226,26 +226,38 @@ body {
   overflow: hidden;
 }
 
-.hero::before {
-  content: '';
+/* Floating particle icons */
+.hero-particles {
   position: absolute;
-  top: -80px;
-  right: -80px;
-  width: 400px;
-  height: 400px;
-  border-radius: 50%;
-  background: rgba(46, 200, 200, 0.08);
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
 }
 
-.hero::after {
-  content: '';
+.fp {
   position: absolute;
-  bottom: -100px;
-  left: -60px;
-  width: 300px;
-  height: 300px;
-  border-radius: 50%;
-  background: rgba(46, 200, 200, 0.05);
+  font-size: 22px;
+  opacity: 0;
+  animation: floatUp 8s ease-in-out infinite;
+  filter: grayscale(1) brightness(0.5);
+}
+
+.fp1  { left: 5%;   animation-delay: 0s;    animation-duration: 9s; }
+.fp2  { left: 12%;  animation-delay: 1.2s;  animation-duration: 11s; }
+.fp3  { left: 22%;  animation-delay: 2.4s;  animation-duration: 8s; }
+.fp4  { left: 35%;  animation-delay: 0.6s;  animation-duration: 10s; }
+.fp5  { left: 48%;  animation-delay: 3s;    animation-duration: 9.5s; }
+.fp6  { left: 58%;  animation-delay: 1.8s;  animation-duration: 12s; }
+.fp7  { left: 68%;  animation-delay: 0.3s;  animation-duration: 8.5s; }
+.fp8  { left: 76%;  animation-delay: 2.1s;  animation-duration: 10.5s; }
+.fp9  { left: 86%;  animation-delay: 1.5s;  animation-duration: 9s; }
+.fp10 { left: 94%;  animation-delay: 3.6s;  animation-duration: 11.5s; }
+
+@keyframes floatUp {
+  0%   { transform: translateY(110%) rotate(0deg);   opacity: 0; }
+  10%  { opacity: 0.25; }
+  80%  { opacity: 0.15; }
+  100% { transform: translateY(-20%) rotate(360deg); opacity: 0; }
 }
 
 .hero-inner {
@@ -811,11 +823,85 @@ body {
   transform: scale(1.35) rotate(-8deg);
 }
 
+/* ============ MEKANİK TAMİR ============ */
+.repair-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.repair-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 24px;
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  transition: transform 0.2s, box-shadow 0.2s, border-color 0.2s;
+}
+
+.repair-card:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--shadow-hover);
+  border-color: var(--turquoise);
+}
+
+.repair-icon-wrap {
+  width: 52px;
+  height: 52px;
+  background: var(--turquoise-light);
+  border-radius: var(--radius-sm);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 24px;
+  transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1), background 0.2s;
+}
+
+.repair-card:hover .repair-icon-wrap {
+  transform: scale(1.15) rotate(-6deg);
+  background: var(--turquoise);
+}
+
+.repair-content h3 {
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+  margin-bottom: 8px;
+}
+
+.repair-content p {
+  font-size: 14px;
+  color: var(--text-gray);
+  line-height: 1.65;
+}
+
+.repair-cta {
+  text-align: center;
+  background: var(--navy);
+  border-radius: var(--radius);
+  padding: 36px 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.repair-cta p {
+  font-size: 17px;
+  color: rgba(255,255,255,0.8);
+  font-weight: 500;
+}
+
 /* ============ RESPONSIVE ============ */
 @media (max-width: 1024px) {
   .grid-4 {
     grid-template-columns: repeat(2, 1fr);
   }
+  .repair-grid { grid-template-columns: repeat(2, 1fr); }
   .hero-text h1 {
     font-size: 42px;
   }
@@ -844,6 +930,7 @@ body {
   }
 
   .grid-3 { grid-template-columns: 1fr; }
+  .repair-grid { grid-template-columns: 1fr; }
   .grid-4 { grid-template-columns: 1fr 1fr; }
 
   .about-inner { grid-template-columns: 1fr; gap: 40px; }
