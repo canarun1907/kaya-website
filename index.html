@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>KAYA Oto Yedek Parça & Mekanik</title>
+  <title>Kaya Oto Yedek Parça — Mekanik Onarım</title>
+  <meta name="description" content="Alman grubu araçlarda yedek parça ve mekanik onarım. BMW, Mercedes, VW, Audi, Skoda ve daha fazlası. Isparta." />
   <link rel="stylesheet" href="style.css" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -15,30 +16,32 @@
   <header class="navbar">
     <div class="container navbar-inner">
       <a href="#" class="logo">
-        <img src="logo.png" alt="KAYA Oto Yedek Parça" />
+        <img src="logo.png" alt="Kaya Oto Yedek Parça" />
       </a>
       <nav class="nav-links">
-        <a href="#kategoriler">Kategoriler</a>
-        <a href="#hizmetler">Hizmetler</a>
-        <a href="#tamir">Tamir</a>
-        <a href="#hakkimizda">Hakkımızda</a>
-        <a href="#iletisim">İletişim</a>
+        <a href="#kategoriler" data-tr="Parçalar" data-en="Parts">Parçalar</a>
+        <a href="#hizmetler" data-tr="Hizmetler" data-en="Services">Hizmetler</a>
+        <a href="#tamir" data-tr="Tamir" data-en="Repair">Tamir</a>
+        <a href="#hakkimizda" data-tr="Hakkımızda" data-en="About">Hakkımızda</a>
+        <a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
       </nav>
-      <a href="#iletisim" class="btn-primary nav-cta">Bize Ulaşın</a>
-      <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+      <div class="navbar-right">
+        <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+        <a href="https://wa.me/905074530787" target="_blank" class="btn-primary nav-cta" data-tr="WhatsApp" data-en="WhatsApp">WhatsApp</a>
+        <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
+      </div>
     </div>
     <nav class="mobile-menu" id="mobileMenu">
-      <a href="#kategoriler" onclick="toggleMenu()">Kategoriler</a>
-      <a href="#hizmetler" onclick="toggleMenu()">Hizmetler</a>
-      <a href="#tamir" onclick="toggleMenu()">Tamir</a>
-      <a href="#hakkimizda" onclick="toggleMenu()">Hakkımızda</a>
-      <a href="#iletisim" onclick="toggleMenu()">İletişim</a>
+      <a href="#kategoriler" onclick="toggleMenu()" data-tr="Parçalar" data-en="Parts">Parçalar</a>
+      <a href="#hizmetler" onclick="toggleMenu()" data-tr="Hizmetler" data-en="Services">Hizmetler</a>
+      <a href="#tamir" onclick="toggleMenu()" data-tr="Tamir" data-en="Repair">Tamir</a>
+      <a href="#hakkimizda" onclick="toggleMenu()" data-tr="Hakkımızda" data-en="About">Hakkımızda</a>
+      <a href="#iletisim" onclick="toggleMenu()" data-tr="İletişim" data-en="Contact">İletişim</a>
     </nav>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <!-- floating background icons -->
     <div class="hero-particles" aria-hidden="true">
       <span class="fp fp1">⚙</span>
       <span class="fp fp2">🔧</span>
@@ -53,31 +56,56 @@
     </div>
     <div class="container hero-inner">
       <div class="hero-text">
-        <span class="hero-badge">Güvenilir Oto Yedek Parça</span>
-        <h1>Aracınız İçin<br /><span class="highlight"><span id="typing-text"></span><span class="cursor">|</span></span><br />Hızlı Çözüm</h1>
-        <p>Otomotiv yedek parça ve mekanik hizmetlerinde kaliteli ürünler, uygun fiyatlar ve uzman kadromuzla yanınızdayız.</p>
+        <span class="hero-badge" data-tr="Alman Grubu Araç Uzmanı" data-en="German Group Vehicle Expert">Alman Grubu Araç Uzmanı</span>
+        <h1 data-tr='Aracınız İçin<br /><span class="highlight"><span id="typing-text"></span><span class="cursor">|</span></span><br />Güvenilir Çözüm' data-en='Reliable Solutions<br /><span class="highlight"><span id="typing-text"></span><span class="cursor">|</span></span><br />For Your Vehicle'>
+          Aracınız İçin<br /><span class="highlight"><span id="typing-text"></span><span class="cursor">|</span></span><br />Güvenilir Çözüm
+        </h1>
+        <p data-tr="BMW, Mercedes, Volkswagen ve Alman grubu araçlarda orijinal ve muadil yedek parça temini ile mekanik onarım hizmeti veriyoruz." data-en="We supply original and aftermarket spare parts and provide mechanical repair services for BMW, Mercedes, Volkswagen and German group vehicles.">BMW, Mercedes, Volkswagen ve Alman grubu araçlarda orijinal ve muadil yedek parça temini ile mekanik onarım hizmeti veriyoruz.</p>
         <div class="hero-actions">
-          <a href="#kategoriler" class="btn-primary">Parça Kataloğu</a>
-          <a href="#iletisim" class="btn-outline">Fiyat Sor</a>
+          <a href="https://wa.me/905074530787?text=Merhaba%2C%20ara%C3%A7%20%C5%9Fase%20numaram%C4%B1%20payla%C5%9Farak%20par%C3%A7a%20sorgulamak%20istiyorum.%0A%C5%9Fase%20No%3A%20" target="_blank" class="btn-primary btn-wa" data-tr="WhatsApp'tan Ulaş" data-en="Contact on WhatsApp">WhatsApp'tan Ulaş</a>
+          <a href="#kategoriler" class="btn-outline" data-tr="Kategorilere Bak" data-en="Browse Categories">Kategorilere Bak</a>
         </div>
       </div>
       <div class="hero-visual">
         <div class="hero-card">
           <div class="hero-stat">
-            <span class="stat-num" data-target="10" data-suffix="+">0</span>
-            <span class="stat-label">Yıl Deneyim</span>
+            <span class="stat-num" data-target="4" data-suffix="+">0</span>
+            <span class="stat-label" data-tr="Yıl Deneyim" data-en="Years Experience">Yıl Deneyim</span>
           </div>
           <div class="hero-divider"></div>
           <div class="hero-stat">
-            <span class="stat-num" data-target="5000" data-suffix="+">0</span>
-            <span class="stat-label">Parça Çeşidi</span>
+            <span class="stat-num" data-target="400" data-suffix="+">0</span>
+            <span class="stat-label" data-tr="Mutlu Müşteri" data-en="Happy Customers">Mutlu Müşteri</span>
           </div>
           <div class="hero-divider"></div>
           <div class="hero-stat">
-            <span class="stat-num" data-target="100" data-prefix="%">0</span>
-            <span class="stat-label">Orijinal & Muadil</span>
+            <span class="stat-num" data-target="95" data-prefix="%" data-suffix="">0</span>
+            <span class="stat-label" data-tr="Müşteri Memnuniyeti" data-en="Customer Satisfaction">Müşteri Memnuniyeti</span>
           </div>
         </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA STRIP -->
+  <section class="cta-strip">
+    <div class="container cta-strip-inner">
+      <div class="cta-strip-item wa-item">
+        <span class="cta-strip-icon">💬</span>
+        <div class="cta-strip-text">
+          <strong data-tr="Şase numaranızı paylaşın, parçayı bulalım." data-en="Share your VIN, we'll find the right part.">Şase numaranızı paylaşın, parçayı bulalım.</strong>
+          <span data-tr="Hızlı yanıt · 7 gün açık" data-en="Fast reply · Open 7 days">Hızlı yanıt · 7 gün açık</span>
+        </div>
+        <a href="https://wa.me/905074530787?text=Merhaba%2C%20ara%C3%A7%20%C5%9Fase%20numaram%C4%B1%20payla%C5%9Farak%20par%C3%A7a%20sorgulamak%20istiyorum.%0A%C5%9Fase%20No%3A%20" target="_blank" class="cta-strip-btn" data-tr="WhatsApp'ta Yaz →" data-en="Message on WhatsApp →">WhatsApp'ta Yaz →</a>
+      </div>
+      <div class="cta-strip-divider"></div>
+      <div class="cta-strip-item ty-item">
+        <span class="cta-strip-icon">🛍️</span>
+        <div class="cta-strip-text">
+          <strong data-tr="Online sipariş için Trendyol mağazamızı ziyaret edin." data-en="Visit our Trendyol store for online orders.">Online sipariş için Trendyol mağazamızı ziyaret edin.</strong>
+          <span data-tr="Güvenli alışveriş · Hızlı kargo" data-en="Secure shopping · Fast shipping">Güvenli alışveriş · Hızlı kargo</span>
+        </div>
+        <a href="https://www.trendyol.com/magaza/m-m-1175253" target="_blank" class="cta-strip-btn ty-btn" data-tr="Mağazaya Git →" data-en="Visit Store →">Mağazaya Git →</a>
       </div>
     </div>
   </section>
@@ -85,31 +113,31 @@
   <!-- MARKALAR MARQUEE -->
   <section class="brands-bar">
     <div class="brands-label-wrap">
-      <p class="brands-label">Uzman olduğumuz markalar</p>
+      <p class="brands-label" data-tr="Uzman olduğumuz markalar" data-en="Brands we specialize in">Uzman olduğumuz markalar</p>
     </div>
     <div class="marquee-wrapper">
       <div class="marquee-track">
         <span class="brand-item">BMW</span><span class="brand-sep">◆</span>
-        <span class="brand-item">Audi</span><span class="brand-sep">◆</span>
-        <span class="brand-item">Volkswagen</span><span class="brand-sep">◆</span>
-        <span class="brand-item">Skoda</span><span class="brand-sep">◆</span>
-        <span class="brand-item">Opel</span><span class="brand-sep">◆</span>
         <span class="brand-item">Mercedes</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Volkswagen</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Audi</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Skoda</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Seat</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Opel</span><span class="brand-sep">◆</span>
         <span class="brand-item">Porsche</span><span class="brand-sep">◆</span>
-        <span class="brand-item">Land Rover</span><span class="brand-sep">◆</span>
-        <span class="brand-item">Cupra</span><span class="brand-sep">◆</span>
         <span class="brand-item">Mini</span><span class="brand-sep">◆</span>
-        <!-- duplicate for seamless loop -->
+        <span class="brand-item">Cupra</span><span class="brand-sep">◆</span>
+        <!-- duplicate -->
         <span class="brand-item">BMW</span><span class="brand-sep">◆</span>
-        <span class="brand-item">Audi</span><span class="brand-sep">◆</span>
-        <span class="brand-item">Volkswagen</span><span class="brand-sep">◆</span>
-        <span class="brand-item">Skoda</span><span class="brand-sep">◆</span>
-        <span class="brand-item">Opel</span><span class="brand-sep">◆</span>
         <span class="brand-item">Mercedes</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Volkswagen</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Audi</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Skoda</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Seat</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Opel</span><span class="brand-sep">◆</span>
         <span class="brand-item">Porsche</span><span class="brand-sep">◆</span>
-        <span class="brand-item">Land Rover</span><span class="brand-sep">◆</span>
-        <span class="brand-item">Cupra</span><span class="brand-sep">◆</span>
         <span class="brand-item">Mini</span><span class="brand-sep">◆</span>
+        <span class="brand-item">Cupra</span><span class="brand-sep">◆</span>
       </div>
     </div>
   </section>
@@ -118,57 +146,57 @@
   <section class="section bg-light" id="kategoriler">
     <div class="container">
       <div class="section-header">
-        <h2>Parça Kategorileri</h2>
-        <p>Geniş ürün yelpazemizle tüm marka ve modeller için yedek parça temin ediyoruz.</p>
+        <h2 data-tr="Parça Kategorileri" data-en="Parts Categories">Parça Kategorileri</h2>
+        <p data-tr="Alman grubu araçlar başta olmak üzere tüm marka ve modeller için geniş parça yelpazemiz." data-en="A wide range of parts for German group vehicles and all other makes and models.">Alman grubu araçlar başta olmak üzere tüm marka ve modeller için geniş parça yelpazemiz.</p>
       </div>
       <div class="grid-4">
 
         <div class="category-card scroll-hidden">
           <div class="cat-icon">🔧</div>
-          <h3>Motor Parçaları</h3>
-          <p>Piston, segman, supap, conta, krank ve tüm motor ekipmanları</p>
+          <h3 data-tr="Motor Parçaları" data-en="Engine Parts">Motor Parçaları</h3>
+          <p data-tr="Piston, segman, supap, conta, krank ve tüm motor ekipmanları" data-en="Pistons, rings, valves, gaskets, crankshaft and all engine components">Piston, segman, supap, conta, krank ve tüm motor ekipmanları</p>
         </div>
 
         <div class="category-card scroll-hidden">
           <div class="cat-icon">🛑</div>
-          <h3>Fren Sistemi</h3>
-          <p>Balata, disk, kaliper, fren hortumu ve ABS bileşenleri</p>
+          <h3 data-tr="Fren Sistemi" data-en="Brake System">Fren Sistemi</h3>
+          <p data-tr="Balata, disk, kaliper, fren hortumu ve ABS bileşenleri" data-en="Pads, discs, calipers, brake hoses and ABS components">Balata, disk, kaliper, fren hortumu ve ABS bileşenleri</p>
         </div>
 
         <div class="category-card scroll-hidden">
           <div class="cat-icon">🚗</div>
-          <h3>Süspansiyon</h3>
-          <p>Amortisör, yay, rot başı, viraj demiri ve rulman takımları</p>
+          <h3 data-tr="Süspansiyon" data-en="Suspension">Süspansiyon</h3>
+          <p data-tr="Amortisör, yay, rot başı, viraj demiri ve rulman takımları" data-en="Shock absorbers, springs, tie rods, sway bars and bearing kits">Amortisör, yay, rot başı, viraj demiri ve rulman takımları</p>
         </div>
 
         <div class="category-card scroll-hidden">
           <div class="cat-icon">⚡</div>
-          <h3>Elektrik & Elektronik</h3>
-          <p>Marş, alternator, sensörler, sigorta kutusu ve kablaj setleri</p>
+          <h3 data-tr="Elektrik & Elektronik" data-en="Electrical & Electronics">Elektrik & Elektronik</h3>
+          <p data-tr="Marş, alternator, sensörler, sigorta kutusu ve kablaj setleri" data-en="Starters, alternators, sensors, fuse boxes and wiring sets">Marş, alternator, sensörler, sigorta kutusu ve kablaj setleri</p>
         </div>
 
         <div class="category-card scroll-hidden">
           <div class="cat-icon">💧</div>
-          <h3>Soğutma Sistemi</h3>
-          <p>Radyatör, termostat, su pompası, hortum ve kalorifer radyatörü</p>
+          <h3 data-tr="Soğutma Sistemi" data-en="Cooling System">Soğutma Sistemi</h3>
+          <p data-tr="Radyatör, termostat, su pompası, hortum ve kalorifer radyatörü" data-en="Radiator, thermostat, water pump, hoses and heater core">Radyatör, termostat, su pompası, hortum ve kalorifer radyatörü</p>
         </div>
 
         <div class="category-card scroll-hidden">
           <div class="cat-icon">🔩</div>
-          <h3>Aktarma Organları</h3>
-          <p>Debriyaj, şanzıman parçaları, diferansiyel ve kardanşaft</p>
+          <h3 data-tr="Aktarma Organları" data-en="Drivetrain">Aktarma Organları</h3>
+          <p data-tr="Debriyaj, şanzıman parçaları, diferansiyel ve kardanşaft" data-en="Clutch, transmission parts, differential and driveshaft">Debriyaj, şanzıman parçaları, diferansiyel ve kardanşaft</p>
         </div>
 
         <div class="category-card scroll-hidden">
           <div class="cat-icon">💨</div>
-          <h3>Egzoz & Emisyon</h3>
-          <p>Katalitik konvertör, egzoz borusu, oksijen sensörü ve susturucu</p>
+          <h3 data-tr="Egzoz & Emisyon" data-en="Exhaust & Emission">Egzoz & Emisyon</h3>
+          <p data-tr="Katalitik konvertör, egzoz borusu, oksijen sensörü ve susturucu" data-en="Catalytic converter, exhaust pipe, oxygen sensor and muffler">Katalitik konvertör, egzoz borusu, oksijen sensörü ve susturucu</p>
         </div>
 
         <div class="category-card scroll-hidden">
           <div class="cat-icon">🪟</div>
-          <h3>Kaporta & Cam</h3>
-          <p>Ön/arka cam, ayna, tampon, kaput ve kapı parçaları</p>
+          <h3 data-tr="Kaporta & Cam" data-en="Body & Glass">Kaporta & Cam</h3>
+          <p data-tr="Ön/arka cam, ayna, tampon, kaput ve kapı parçaları" data-en="Windshields, mirrors, bumpers, hoods and door parts">Ön/arka cam, ayna, tampon, kaput ve kapı parçaları</p>
         </div>
 
       </div>
@@ -179,107 +207,106 @@
   <section class="section" id="hizmetler">
     <div class="container">
       <div class="section-header">
-        <h2>Hizmetlerimiz</h2>
-        <p>Sadece parça satışı değil — ihtiyacınız olan her konuda destek veriyoruz.</p>
+        <h2 data-tr="Hizmetlerimiz" data-en="Our Services">Hizmetlerimiz</h2>
+        <p data-tr="Sadece parça değil — aracınızın ihtiyaç duyduğu her konuda profesyonel destek." data-en="Not just parts — professional support for everything your vehicle needs.">Sadece parça değil — aracınızın ihtiyaç duyduğu her konuda profesyonel destek.</p>
       </div>
-      <div class="grid-3">
+      <div class="services-grid">
 
         <div class="service-card scroll-hidden">
           <div class="service-num">01</div>
-          <h3>Parça Temin & Satış</h3>
-          <p>Orijinal ve muadil yedek parça seçenekleriyle her bütçeye uygun çözümler sunuyoruz.</p>
+          <h3 data-tr="Yedek Parça Temini" data-en="Spare Parts Supply">Yedek Parça Temini</h3>
+          <p data-tr="Orijinal ve muadil yedek parça seçenekleriyle her bütçeye uygun çözümler. Stokta olmayan parçalar kısa sürede temin edilir." data-en="Original and aftermarket spare parts for every budget. Parts not in stock are sourced quickly.">Orijinal ve muadil yedek parça seçenekleriyle her bütçeye uygun çözümler. Stokta olmayan parçalar kısa sürede temin edilir.</p>
         </div>
 
         <div class="service-card scroll-hidden">
           <div class="service-num">02</div>
-          <h3>Parça Uyumluluk Danışmanlığı</h3>
-          <p>Aracınızın markası, modeli ve yılına göre doğru parçayı birlikte belirliyoruz.</p>
+          <h3 data-tr="Mekanik Onarım" data-en="Mechanical Repair">Mekanik Onarım</h3>
+          <p data-tr="Motor, şanzıman, fren, süspansiyon ve tüm mekanik sistemlerde uzman ekibimizle onarım hizmeti." data-en="Expert repair services for engine, transmission, brakes, suspension and all mechanical systems.">Motor, şanzıman, fren, süspansiyon ve tüm mekanik sistemlerde uzman ekibimizle onarım hizmeti.</p>
         </div>
 
         <div class="service-card scroll-hidden">
           <div class="service-num">03</div>
-          <h3>Hızlı Tedarik</h3>
-          <p>Stokta olmayan parçaları kısa sürede temin ediyor, sizi bilgilendiriyoruz.</p>
+          <h3 data-tr="Kaporta Parçaları" data-en="Body Parts">Kaporta Parçaları</h3>
+          <p data-tr="Cam, ayna, tampon, kaput, kapı gibi tüm kaporta parçaları orijinal kalitede temin edilir." data-en="All body parts including glass, mirrors, bumpers, hoods and doors are supplied at original quality.">Cam, ayna, tampon, kaput, kapı gibi tüm kaporta parçaları orijinal kalitede temin edilir.</p>
+        </div>
+
+        <div class="service-card scroll-hidden">
+          <div class="service-num">04</div>
+          <h3 data-tr="Periyodik Bakım" data-en="Periodic Maintenance">Periyodik Bakım</h3>
+          <p data-tr="Km bazlı bakım planı: yağ, filtre, buji, v-kayış değişimi ve kapsamlı kontrol hizmeti." data-en="Mileage-based maintenance: oil, filter, spark plug, belt changes and comprehensive inspection.">Km bazlı bakım planı: yağ, filtre, buji, v-kayış değişimi ve kapsamlı kontrol hizmeti.</p>
+        </div>
+
+        <div class="service-card scroll-hidden">
+          <div class="service-num">05</div>
+          <h3 data-tr="Uyumluluk Danışmanlığı" data-en="Compatibility Consulting">Uyumluluk Danışmanlığı</h3>
+          <p data-tr="Aracınızın marka, model ve üretim yılına göre doğru parçayı birlikte belirliyor, yanlış alım riskini sıfıra indiriyoruz." data-en="We help you find the exact right part for your vehicle's make, model and year, eliminating the risk of wrong purchases.">Aracınızın marka, model ve üretim yılına göre doğru parçayı birlikte belirliyor, yanlış alım riskini sıfıra indiriyoruz.</p>
         </div>
 
       </div>
     </div>
   </section>
 
-  <!-- MEKANİK TAMİR HİZMETLERİ -->
+  <!-- MEKANİK TAMİR -->
   <section class="section bg-light" id="tamir">
     <div class="container">
       <div class="section-header">
-        <h2>Mekanik Tamir Hizmetleri</h2>
-        <p>Aracınızın her türlü mekanik arızasında uzman ekibimizle yanınızdayız.</p>
+        <h2 data-tr="Mekanik Tamir Hizmetleri" data-en="Mechanical Repair Services">Mekanik Tamir Hizmetleri</h2>
+        <p data-tr="Aracınızın her türlü mekanik arızasında uzman ekibimizle yanınızdayız." data-en="Our expert team is here for all types of mechanical issues with your vehicle.">Aracınızın her türlü mekanik arızasında uzman ekibimizle yanınızdayız.</p>
       </div>
       <div class="repair-grid">
 
         <div class="repair-card scroll-hidden">
-          <div class="repair-icon-wrap">
-            <span class="repair-icon">🔩</span>
-          </div>
+          <div class="repair-icon-wrap"><span class="repair-icon">🔩</span></div>
           <div class="repair-content">
-            <h3>Motor Revizyonu</h3>
-            <p>Silindir, piston, supap ve conta değişimi dahil tam motor revizyonu hizmeti.</p>
+            <h3 data-tr="Motor Revizyonu" data-en="Engine Overhaul">Motor Revizyonu</h3>
+            <p data-tr="Silindir, piston, supap ve conta değişimi dahil tam motor revizyonu." data-en="Full engine overhaul including cylinder, piston, valve and gasket replacement.">Silindir, piston, supap ve conta değişimi dahil tam motor revizyonu.</p>
           </div>
         </div>
 
         <div class="repair-card scroll-hidden">
-          <div class="repair-icon-wrap">
-            <span class="repair-icon">🛑</span>
-          </div>
+          <div class="repair-icon-wrap"><span class="repair-icon">🛑</span></div>
           <div class="repair-content">
-            <h3>Fren Sistemi Bakımı</h3>
-            <p>Balata, disk, kaliper değişimi ve fren hidroliği tazeleme işlemleri.</p>
+            <h3 data-tr="Fren Sistemi Bakımı" data-en="Brake System Service">Fren Sistemi Bakımı</h3>
+            <p data-tr="Balata, disk, kaliper değişimi ve fren hidroliği tazeleme işlemleri." data-en="Pad, disc, caliper replacement and brake fluid refresh.">Balata, disk, kaliper değişimi ve fren hidroliği tazeleme işlemleri.</p>
           </div>
         </div>
 
         <div class="repair-card scroll-hidden">
-          <div class="repair-icon-wrap">
-            <span class="repair-icon">💧</span>
-          </div>
+          <div class="repair-icon-wrap"><span class="repair-icon">💧</span></div>
           <div class="repair-content">
-            <h3>Yağ & Filtre Değişimi</h3>
-            <p>Motor yağı, hava filtresi, yağ filtresi ve şanzıman yağı değişimi.</p>
+            <h3 data-tr="Yağ & Filtre Değişimi" data-en="Oil & Filter Change">Yağ & Filtre Değişimi</h3>
+            <p data-tr="Motor yağı, hava filtresi, yağ filtresi ve şanzıman yağı değişimi." data-en="Engine oil, air filter, oil filter and transmission fluid change.">Motor yağı, hava filtresi, yağ filtresi ve şanzıman yağı değişimi.</p>
           </div>
         </div>
 
         <div class="repair-card scroll-hidden">
-          <div class="repair-icon-wrap">
-            <span class="repair-icon">🚗</span>
-          </div>
+          <div class="repair-icon-wrap"><span class="repair-icon">🚗</span></div>
           <div class="repair-content">
-            <h3>Süspansiyon Tamiri</h3>
-            <p>Amortisör, rot başı, viraj demiri ve rulman değişimi ile ayar işlemleri.</p>
+            <h3 data-tr="Süspansiyon Tamiri" data-en="Suspension Repair">Süspansiyon Tamiri</h3>
+            <p data-tr="Amortisör, rot başı, viraj demiri ve rulman değişimi ile ayar işlemleri." data-en="Shock absorber, tie rod, sway bar and bearing replacement with alignment.">Amortisör, rot başı, viraj demiri ve rulman değişimi ile ayar işlemleri.</p>
           </div>
         </div>
 
         <div class="repair-card scroll-hidden">
-          <div class="repair-icon-wrap">
-            <span class="repair-icon">⚡</span>
-          </div>
+          <div class="repair-icon-wrap"><span class="repair-icon">⚡</span></div>
           <div class="repair-content">
-            <h3>Elektrik Arızaları</h3>
-            <p>Marş, alternator, far, sensör ve kablaj arızalarının tespiti ve onarımı.</p>
+            <h3 data-tr="Elektrik Arızaları" data-en="Electrical Faults">Elektrik Arızaları</h3>
+            <p data-tr="Marş, alternator, far, sensör ve kablaj arızalarının tespiti ve onarımı." data-en="Diagnosis and repair of starter, alternator, headlight, sensor and wiring faults.">Marş, alternator, far, sensör ve kablaj arızalarının tespiti ve onarımı.</p>
           </div>
         </div>
 
         <div class="repair-card scroll-hidden">
-          <div class="repair-icon-wrap">
-            <span class="repair-icon">🔧</span>
-          </div>
+          <div class="repair-icon-wrap"><span class="repair-icon">🔧</span></div>
           <div class="repair-content">
-            <h3>Periyodik Bakım</h3>
-            <p>Km bazlı bakım planı: buji, v-kayış, soğutma suyu ve tüm kontroller.</p>
+            <h3 data-tr="Periyodik Bakım" data-en="Periodic Maintenance">Periyodik Bakım</h3>
+            <p data-tr="Km bazlı bakım planı: buji, v-kayış, soğutma suyu ve tüm kontroller." data-en="Mileage-based plan: spark plugs, belts, coolant and all checks.">Km bazlı bakım planı: buji, v-kayış, soğutma suyu ve tüm kontroller.</p>
           </div>
         </div>
 
       </div>
-
       <div class="repair-cta">
-        <p>Aracınız için randevu veya fiyat bilgisi almak ister misiniz?</p>
-        <a href="#iletisim" class="btn-primary">Hemen Ara — 0507 453 07 87</a>
+        <p data-tr="Aracınız için fiyat bilgisi almak ister misiniz?" data-en="Would you like to get a price quote for your vehicle?">Aracınız için fiyat bilgisi almak ister misiniz?</p>
+        <a href="tel:+905074530787" class="btn-primary" data-tr="Hemen Ara — 0507 453 07 87" data-en="Call Now — 0507 453 07 87">Hemen Ara — 0507 453 07 87</a>
       </div>
     </div>
   </section>
@@ -288,29 +315,29 @@
   <section class="section bg-navy">
     <div class="container">
       <div class="section-header light">
-        <h2>Neden KAYA?</h2>
-        <p>Müşterilerimizin bize güvenme nedenleri</p>
+        <h2 data-tr="Neden Kaya Oto?" data-en="Why Kaya Oto?">Neden Kaya Oto?</h2>
+        <p data-tr="Müşterilerimizin bize güvenme nedenleri" data-en="The reasons our customers trust us">Müşterilerimizin bize güvenme nedenleri</p>
       </div>
       <div class="grid-4">
         <div class="why-card scroll-hidden">
           <div class="why-icon">✅</div>
-          <h4>Garantili Ürünler</h4>
-          <p>Sattığımız tüm parçalar garantili ve kalite kontrollüdür.</p>
+          <h4 data-tr="Garantili Ürünler" data-en="Guaranteed Products">Garantili Ürünler</h4>
+          <p data-tr="Sattığımız tüm parçalar garantili ve kalite kontrollüdür." data-en="All parts we sell are guaranteed and quality checked.">Sattığımız tüm parçalar garantili ve kalite kontrollüdür.</p>
         </div>
         <div class="why-card scroll-hidden">
           <div class="why-icon">💰</div>
-          <h4>Rekabetçi Fiyat</h4>
-          <p>Piyasanın en uygun fiyatlarıyla kaliteli parça ulaştırıyoruz.</p>
+          <h4 data-tr="Rekabetçi Fiyat" data-en="Competitive Pricing">Rekabetçi Fiyat</h4>
+          <p data-tr="Piyasanın en uygun fiyatlarıyla kaliteli parça ulaştırıyoruz." data-en="We deliver quality parts at the most competitive market prices.">Piyasanın en uygun fiyatlarıyla kaliteli parça ulaştırıyoruz.</p>
         </div>
         <div class="why-card scroll-hidden">
           <div class="why-icon">🚀</div>
-          <h4>Hızlı Servis</h4>
-          <p>Sizi bekletmeden hızlı temin ve teslimat yapıyoruz.</p>
+          <h4 data-tr="Hızlı Tedarik" data-en="Fast Supply">Hızlı Tedarik</h4>
+          <p data-tr="Sizi bekletmeden kısa sürede parça temin ve teslimat yapıyoruz." data-en="We source and deliver parts quickly without keeping you waiting.">Sizi bekletmeden kısa sürede parça temin ve teslimat yapıyoruz.</p>
         </div>
         <div class="why-card scroll-hidden">
           <div class="why-icon">🤝</div>
-          <h4>Uzman Kadro</h4>
-          <p>Deneyimli ekibimiz ile her konuda yanınızdayız.</p>
+          <h4 data-tr="Uzman Kadro" data-en="Expert Team">Uzman Kadro</h4>
+          <p data-tr="Deneyimli ekibimiz Alman grubu araçlarda uzmanlaşmıştır." data-en="Our experienced team specializes in German group vehicles.">Deneyimli ekibimiz Alman grubu araçlarda uzmanlaşmıştır.</p>
         </div>
       </div>
     </div>
@@ -320,34 +347,34 @@
   <section class="section bg-light" id="hakkimizda">
     <div class="container about-inner">
       <div class="about-text">
-        <span class="section-tag">Hakkımızda</span>
-        <h2>KAYA Oto Yedek Parça & Mekanik</h2>
-        <p>Yılların deneyimiyle otomotiv sektöründe güvenilir bir isim olan KAYA Oto Yedek Parça, geniş parça kataloğu ve uzman ekibiyle müşterilerine en iyi hizmeti sunmaktadır.</p>
-        <p>Orijinal ve muadil parça seçenekleriyle her bütçeye uygun çözümler üretir, müşteri memnuniyetini her zaman ön planda tutarız.</p>
+        <span class="section-tag" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</span>
+        <h2 data-tr="Kaya Oto Yedek Parça" data-en="Kaya Oto Spare Parts">Kaya Oto Yedek Parça</h2>
+        <p data-tr="Alman grubu araçların yedek parça tedariği, bakım ve onarım hizmeti vermekteyiz. BMW, Mercedes, Volkswagen, Audi, Skoda, Seat, Opel, Porsche, Mini ve Cupra markalarında uzmanız." data-en="We provide spare parts supply, maintenance and repair services for German group vehicles. We specialize in BMW, Mercedes, Volkswagen, Audi, Skoda, Seat, Opel, Porsche, Mini and Cupra.">Alman grubu araçların yedek parça tedariği, bakım ve onarım hizmeti vermekteyiz. BMW, Mercedes, Volkswagen, Audi, Skoda, Seat, Opel, Porsche, Mini ve Cupra markalarında uzmanız.</p>
+        <p data-tr="Orijinal ve muadil parça seçenekleriyle her bütçeye uygun çözümler üretir, müşteri memnuniyetini her zaman ön planda tutarız." data-en="We offer solutions for every budget with original and aftermarket parts, always putting customer satisfaction first.">Orijinal ve muadil parça seçenekleriyle her bütçeye uygun çözümler üretir, müşteri memnuniyetini her zaman ön planda tutarız.</p>
         <ul class="about-list">
-          <li>✔ Tüm marka ve modeller için geniş parça stoğu</li>
-          <li>✔ Orijinal ve muadil seçenekler</li>
-          <li>✔ Uzman teknik danışmanlık</li>
-          <li>✔ Hızlı teslimat ve tedarik</li>
+          <li data-tr="✔ Alman grubu araçlarda uzman kadro" data-en="✔ Expert team in German group vehicles">✔ Alman grubu araçlarda uzman kadro</li>
+          <li data-tr="✔ Orijinal ve muadil parça seçenekleri" data-en="✔ Original and aftermarket parts options">✔ Orijinal ve muadil parça seçenekleri</li>
+          <li data-tr="✔ Hızlı parça temini ve teslimat" data-en="✔ Fast parts sourcing and delivery">✔ Hızlı parça temini ve teslimat</li>
+          <li data-tr="✔ Garantili ürünler ve uzman danışmanlık" data-en="✔ Guaranteed products and expert consulting">✔ Garantili ürünler ve uzman danışmanlık</li>
         </ul>
       </div>
       <div class="about-visual">
         <div class="about-badge-group">
           <div class="about-badge">
-            <span class="ab-num">10+</span>
-            <span class="ab-text">Yıl Deneyim</span>
+            <span class="ab-num">4+</span>
+            <span class="ab-text" data-tr="Yıl Deneyim" data-en="Years Experience">Yıl Deneyim</span>
           </div>
           <div class="about-badge turquoise">
-            <span class="ab-num">5000+</span>
-            <span class="ab-text">Parça Çeşidi</span>
+            <span class="ab-num">400+</span>
+            <span class="ab-text" data-tr="Mutlu Müşteri" data-en="Happy Customers">Mutlu Müşteri</span>
+          </div>
+          <div class="about-badge turquoise">
+            <span class="ab-num">%95</span>
+            <span class="ab-text" data-tr="Memnuniyet" data-en="Satisfaction">Memnuniyet</span>
           </div>
           <div class="about-badge">
-            <span class="ab-num">Orijinal</span>
-            <span class="ab-text">& Muadil Stok</span>
-          </div>
-          <div class="about-badge turquoise">
-            <span class="ab-num">7/24</span>
-            <span class="ab-text">Fiyat Sorgulama</span>
+            <span class="ab-num">10+</span>
+            <span class="ab-text" data-tr="Uzman Marka" data-en="Expert Brands">Uzman Marka</span>
           </div>
         </div>
       </div>
@@ -358,8 +385,8 @@
   <section class="section" id="iletisim">
     <div class="container">
       <div class="section-header">
-        <h2>İletişim</h2>
-        <p>Parça sormak, fiyat almak veya bilgi edinmek için bize ulaşın.</p>
+        <h2 data-tr="İletişim" data-en="Contact">İletişim</h2>
+        <p data-tr="Parça sormak, fiyat almak veya randevu için bize ulaşın." data-en="Contact us for parts inquiries, quotes or appointments.">Parça sormak, fiyat almak veya randevu için bize ulaşın.</p>
       </div>
       <div class="contact-grid">
 
@@ -367,43 +394,74 @@
           <div class="contact-item">
             <div class="contact-icon">📍</div>
             <div>
-              <h4>Adres</h4>
-              <p>Sanayi Mah. 3261 Sk. No:2/1<br />ISPARTA<br /><small>(Esnaf Sanatkârlar Arkası)</small></p>
+              <h4 data-tr="Adres" data-en="Address">Adres</h4>
+              <p>Sanayi Mah. 3261 Sk. No:2/1<br />Merkez / ISPARTA</p>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon">📞</div>
             <div>
-              <h4>Telefon</h4>
+              <h4 data-tr="Telefon" data-en="Phone">Telefon</h4>
               <p><a href="tel:+905074530787">0507 453 07 87</a></p>
+            </div>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <div>
+              <h4 data-tr="E-posta" data-en="E-mail">E-posta</h4>
+              <p><a href="mailto:burak@otokayayedekparca.com">burak@otokayayedekparca.com</a></p>
             </div>
           </div>
           <div class="contact-item">
             <div class="contact-icon">🕐</div>
             <div>
-              <h4>Çalışma Saatleri</h4>
-              <p>Pazartesi – Cumartesi: 08:00 – 18:00</p>
+              <h4 data-tr="Çalışma Saatleri" data-en="Working Hours">Çalışma Saatleri</h4>
+              <p data-tr="Pazartesi – Cumartesi: 08:30 – 19:00" data-en="Monday – Saturday: 08:30 – 19:00">Pazartesi – Cumartesi: 08:30 – 19:00</p>
             </div>
           </div>
           <div class="contact-item">
-            <div class="contact-icon">👤</div>
+            <div class="contact-icon">📦</div>
             <div>
-              <h4>Yetkili</h4>
-              <p>Burak KAYA</p>
+              <h4 data-tr="Online Mağaza" data-en="Online Store">Online Mağaza</h4>
+              <p><a href="https://www.trendyol.com/magaza/m-m-1175253" target="_blank" data-tr="Trendyol Mağazamız →" data-en="Our Trendyol Store →">Trendyol Mağazamız →</a></p>
             </div>
           </div>
         </div>
 
-        <div class="contact-form">
-          <h3>Parça Sorgula</h3>
-          <form onsubmit="handleForm(event)">
-            <input type="text" placeholder="Adınız Soyadınız" required />
-            <input type="tel" placeholder="Telefon Numaranız" required />
-            <input type="text" placeholder="Araç Marka / Model / Yıl" required />
-            <textarea placeholder="Aradığınız parçayı belirtin..." rows="4" required></textarea>
-            <button type="submit" class="btn-primary full-width">Gönder</button>
-          </form>
-          <p class="form-note" id="formNote"></p>
+        <div class="contact-actions">
+          <h3 data-tr="Hızlı İletişim" data-en="Quick Contact">Hızlı İletişim</h3>
+          <p class="contact-sub" data-tr="Aklınızdaki parça veya hizmet için hemen ulaşın." data-en="Reach out now for the part or service you need.">Aklınızdaki parça veya hizmet için hemen ulaşın.</p>
+
+          <div class="quick-btns">
+            <a href="https://wa.me/905074530787?text=Merhaba%2C%20ara%C3%A7%20%C5%9Fase%20numaram%C4%B1%20payla%C5%9Farak%20par%C3%A7a%20sorgulamak%20istiyorum.%0A%C5%9Fase%20No%3A%20" target="_blank" class="quick-btn whatsapp">
+              <span class="qb-icon">💬</span>
+              <div>
+                <span class="qb-title" data-tr="WhatsApp'tan Yaz" data-en="Message on WhatsApp">WhatsApp'tan Yaz</span>
+                <span class="qb-sub" data-tr="Hızlı cevap" data-en="Fast response">Hızlı cevap</span>
+              </div>
+            </a>
+            <a href="tel:+905074530787" class="quick-btn call">
+              <span class="qb-icon">📞</span>
+              <div>
+                <span class="qb-title" data-tr="Hemen Ara" data-en="Call Now">Hemen Ara</span>
+                <span class="qb-sub">0507 453 07 87</span>
+              </div>
+            </a>
+            <a href="mailto:burak@otokayayedekparca.com" class="quick-btn email">
+              <span class="qb-icon">✉️</span>
+              <div>
+                <span class="qb-title" data-tr="E-posta Gönder" data-en="Send E-mail">E-posta Gönder</span>
+                <span class="qb-sub">burak@otokayayedekparca.com</span>
+              </div>
+            </a>
+            <a href="https://www.instagram.com/otokayaa" target="_blank" class="quick-btn instagram">
+              <span class="qb-icon">📷</span>
+              <div>
+                <span class="qb-title">Instagram</span>
+                <span class="qb-sub">@otokayaa</span>
+              </div>
+            </a>
+          </div>
         </div>
 
       </div>
@@ -414,39 +472,45 @@
   <footer class="footer">
     <div class="container footer-inner">
       <div class="footer-logo">
-        <img src="logo.png" alt="KAYA" />
-        <p>Otomotiv yedek parça ve mekanik hizmetlerinde güvenilir adresiniz.</p>
+        <img src="logo.png" alt="Kaya Oto Yedek Parça" />
+        <p data-tr="Alman grubu araçlarda yedek parça ve mekanik onarım hizmetinde güvenilir adresiniz." data-en="Your trusted address for spare parts and mechanical repair in German group vehicles.">Alman grubu araçlarda yedek parça ve mekanik onarım hizmetinde güvenilir adresiniz.</p>
+        <div class="footer-social">
+          <a href="https://www.instagram.com/otokayaa" target="_blank" class="social-link">Instagram @otokayaa</a>
+          <a href="https://www.trendyol.com/magaza/m-m-1175253" target="_blank" class="social-link" data-tr="Trendyol Mağaza" data-en="Trendyol Store">Trendyol Mağaza</a>
+        </div>
       </div>
       <div class="footer-links">
-        <h4>Hızlı Bağlantılar</h4>
-        <a href="#kategoriler">Kategoriler</a>
-        <a href="#hizmetler">Hizmetler</a>
-        <a href="#hakkimizda">Hakkımızda</a>
-        <a href="#iletisim">İletişim</a>
+        <h4 data-tr="Hızlı Bağlantılar" data-en="Quick Links">Hızlı Bağlantılar</h4>
+        <a href="#kategoriler" data-tr="Parça Kategorileri" data-en="Parts Categories">Parça Kategorileri</a>
+        <a href="#hizmetler" data-tr="Hizmetler" data-en="Services">Hizmetler</a>
+        <a href="#tamir" data-tr="Mekanik Tamir" data-en="Mechanical Repair">Mekanik Tamir</a>
+        <a href="#hakkimizda" data-tr="Hakkımızda" data-en="About Us">Hakkımızda</a>
+        <a href="#iletisim" data-tr="İletişim" data-en="Contact">İletişim</a>
       </div>
       <div class="footer-contact">
-        <h4>İletişim</h4>
-        <p>📞 0507 453 07 87</p>
+        <h4 data-tr="İletişim" data-en="Contact">İletişim</h4>
+        <p>📞 <a href="tel:+905074530787" style="color:inherit">0507 453 07 87</a></p>
+        <p>✉️ <a href="mailto:burak@otokayayedekparca.com" style="color:inherit">burak@otokayayedekparca.com</a></p>
         <p>📍 Sanayi Mah. 3261 Sk. No:2/1, ISPARTA</p>
-        <p>🕐 Pzt–Cmt: 08:00–18:00</p>
+        <p data-tr="🕐 Pzt–Cmt: 08:30–19:00" data-en="🕐 Mon–Sat: 08:30–19:00">🕐 Pzt–Cmt: 08:30–19:00</p>
       </div>
     </div>
     <div class="footer-bottom">
-      <p>© 2025 KAYA Oto Yedek Parça & Mekanik. Tüm hakları saklıdır.</p>
+      <p>© 2025 Kaya Oto Yedek Parça — <span data-tr="Tüm hakları saklıdır." data-en="All rights reserved.">Tüm hakları saklıdır.</span></p>
     </div>
   </footer>
+
+  <!-- FLOATING WHATSAPP -->
+  <a href="https://wa.me/905074530787?text=Merhaba%2C%20ara%C3%A7%20%C5%9Fase%20numaram%C4%B1%20payla%C5%9Farak%20par%C3%A7a%20sorgulamak%20istiyorum.%0A%C5%9Fase%20No%3A%20" target="_blank" class="float-wa" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="currentColor" width="28" height="28">
+      <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+    </svg>
+  </a>
 
   <script>
     /* ── Hamburger ── */
     function toggleMenu() {
       document.getElementById('mobileMenu').classList.toggle('open');
-    }
-
-    /* ── Form ── */
-    function handleForm(e) {
-      e.preventDefault();
-      document.getElementById('formNote').textContent = '✅ Mesajınız alındı. En kısa sürede sizi arayacağız!';
-      e.target.reset();
     }
 
     /* ── Smooth scroll ── */
@@ -458,7 +522,7 @@
       });
     });
 
-    /* ── 1. SAYAÇ ANİMASYONU ── */
+    /* ── Sayaç Animasyonu ── */
     function animateCounter(el) {
       const target = parseInt(el.dataset.target);
       const suffix = el.dataset.suffix || '';
@@ -470,10 +534,7 @@
       const increment = target / totalSteps;
       const timer = setInterval(() => {
         current += increment;
-        if (current >= target) {
-          current = target;
-          clearInterval(timer);
-        }
+        if (current >= target) { current = target; clearInterval(timer); }
         el.textContent = prefix + Math.floor(current).toLocaleString('tr') + suffix;
       }, step);
     }
@@ -489,13 +550,11 @@
 
     document.querySelectorAll('.stat-num[data-target]').forEach(el => counterObserver.observe(el));
 
-    /* ── 2. SCROLL-IN KARTLAR ── */
+    /* ── Scroll-in Kartlar ── */
     const scrollObserver = new IntersectionObserver((entries) => {
-      entries.forEach((entry, i) => {
+      entries.forEach(entry => {
         if (entry.isIntersecting) {
-          setTimeout(() => {
-            entry.target.classList.add('scroll-visible');
-          }, (entry.target.dataset.delay || 0));
+          setTimeout(() => entry.target.classList.add('scroll-visible'), entry.target.dataset.delay || 0);
           scrollObserver.unobserve(entry.target);
         }
       });
@@ -506,34 +565,40 @@
       scrollObserver.observe(el);
     });
 
-    /* ── 3. HERO TYPING EFEKTİ ── */
-    const words = ['Doğru Parça,', 'Motor Parçası,', 'Fren Balata,', 'Süspansiyon,', 'Elektrik Parçası,'];
+    /* ── Typing Efekti ── */
+    const wordSets = {
+      tr: ['BMW Parçası,', 'Mercedes Parçası,', 'Volkswagen Parçası,', 'Audi Parçası,', 'Skoda Parçası,'],
+      en: ['BMW Parts,', 'Mercedes Parts,', 'Volkswagen Parts,', 'Audi Parts,', 'Skoda Parts,']
+    };
     let wi = 0, ci = 0, deleting = false;
     const typingEl = document.getElementById('typing-text');
 
     function type() {
-      const word = words[wi];
+      const words = wordSets[currentLang];
+      const word = words[wi % words.length];
       if (!deleting) {
         typingEl.textContent = word.slice(0, ++ci);
-        if (ci === word.length) {
-          deleting = true;
-          setTimeout(type, 1800);
-          return;
-        }
+        if (ci === word.length) { deleting = true; setTimeout(type, 1800); return; }
       } else {
         typingEl.textContent = word.slice(0, --ci);
-        if (ci === 0) {
-          deleting = false;
-          wi = (wi + 1) % words.length;
-        }
+        if (ci === 0) { deleting = false; wi = (wi + 1) % words.length; }
       }
       setTimeout(type, deleting ? 60 : 100);
     }
     type();
 
-    /* ── 4. KATEGORİ İKON HOVER (CSS ile — JS gerekmez) ── */
+    /* ── Dil Değiştirme ── */
+    let currentLang = 'tr';
 
-    /* ── 5. MARQUEE (CSS ile — JS gerekmez) ── */
+    function toggleLang() {
+      currentLang = currentLang === 'tr' ? 'en' : 'tr';
+      document.documentElement.lang = currentLang;
+      document.getElementById('langBtn').textContent = currentLang === 'tr' ? 'EN' : 'TR';
+      document.querySelectorAll('[data-tr]').forEach(el => {
+        const val = el.dataset[currentLang];
+        if (val !== undefined) el.innerHTML = val;
+      });
+    }
   </script>
 
 </body>
