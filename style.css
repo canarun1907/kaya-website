@@ -276,6 +276,7 @@ body { font-family: 'Inter', sans-serif; color: var(--text-dark); background: va
 .contact-item p { font-size: 15px; color: var(--text-dark); font-weight: 500; }
 .contact-item a { color: var(--turquoise); text-decoration: none; }
 .contact-item a:hover { text-decoration: underline; }
+.maps-link { display: inline-block; margin-top: 6px; font-size: 13px; font-weight: 600; color: #4285F4; }
 
 /* Quick Contact */
 .contact-actions { display: flex; flex-direction: column; gap: 20px; }
