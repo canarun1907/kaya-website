@@ -74,12 +74,12 @@
           </div>
           <div class="hero-divider"></div>
           <div class="hero-stat">
-            <span class="stat-num" data-target="400" data-suffix="+">0</span>
+            <span class="stat-num" data-target="4000" data-suffix="+">0</span>
             <span class="stat-label" data-tr="Mutlu Müşteri" data-en="Happy Customers">Mutlu Müşteri</span>
           </div>
           <div class="hero-divider"></div>
           <div class="hero-stat">
-            <span class="stat-num" data-target="95" data-prefix="%" data-suffix="">0</span>
+            <span class="stat-num" data-target="100" data-prefix="%" data-suffix="">0</span>
             <span class="stat-label" data-tr="Müşteri Memnuniyeti" data-en="Customer Satisfaction">Müşteri Memnuniyeti</span>
           </div>
         </div>
@@ -93,8 +93,8 @@
       <div class="cta-strip-item wa-item">
         <span class="cta-strip-icon">💬</span>
         <div class="cta-strip-text">
-          <strong data-tr="Şase numaranızı paylaşın, parçayı bulalım." data-en="Share your VIN, we'll find the right part.">Şase numaranızı paylaşın, parçayı bulalım.</strong>
-          <span data-tr="Hızlı yanıt · 7 gün açık" data-en="Fast reply · Open 7 days">Hızlı yanıt · 7 gün açık</span>
+          <strong data-tr="Şase numaranızı paylaşın, size uygun parçayı bulalım." data-en="Share your VIN number, we'll find the right part for you.">Şase numaranızı paylaşın, size uygun parçayı bulalım.</strong>
+          <span data-tr="Pzt–Cmt 08:30–19:00 arası ulaşabilirsiniz" data-en="Available Mon–Sat 08:30–19:00">Pzt–Cmt 08:30–19:00 arası ulaşabilirsiniz</span>
         </div>
         <a href="https://wa.me/905074530787?text=Merhaba%2C%20ara%C3%A7%20%C5%9Fase%20numaram%C4%B1%20payla%C5%9Farak%20par%C3%A7a%20sorgulamak%20istiyorum.%0A%C5%9Fase%20No%3A%20" target="_blank" class="cta-strip-btn" data-tr="WhatsApp'ta Yaz →" data-en="Message on WhatsApp →">WhatsApp'ta Yaz →</a>
       </div>
@@ -365,11 +365,11 @@
             <span class="ab-text" data-tr="Yıl Deneyim" data-en="Years Experience">Yıl Deneyim</span>
           </div>
           <div class="about-badge turquoise">
-            <span class="ab-num">400+</span>
+            <span class="ab-num">4000+</span>
             <span class="ab-text" data-tr="Mutlu Müşteri" data-en="Happy Customers">Mutlu Müşteri</span>
           </div>
           <div class="about-badge turquoise">
-            <span class="ab-num">%95</span>
+            <span class="ab-num">%100</span>
             <span class="ab-text" data-tr="Memnuniyet" data-en="Satisfaction">Memnuniyet</span>
           </div>
           <div class="about-badge">
@@ -566,6 +566,19 @@
       scrollObserver.observe(el);
     });
 
+    /* ── Dil Değiştirme ── */
+    let currentLang = 'tr';
+
+    function toggleLang() {
+      currentLang = currentLang === 'tr' ? 'en' : 'tr';
+      document.documentElement.lang = currentLang;
+      document.getElementById('langBtn').textContent = currentLang === 'tr' ? 'EN' : 'TR';
+      document.querySelectorAll('[data-tr]:not(h1)').forEach(el => {
+        const val = el.dataset[currentLang];
+        if (val !== undefined) el.innerHTML = val;
+      });
+    }
+
     /* ── Typing Efekti ── */
     const wordSets = {
       tr: ['BMW Parçası,', 'Mercedes Parçası,', 'Volkswagen Parçası,', 'Audi Parçası,', 'Skoda Parçası,'],
@@ -587,19 +600,6 @@
       setTimeout(type, deleting ? 60 : 100);
     }
     type();
-
-    /* ── Dil Değiştirme ── */
-    let currentLang = 'tr';
-
-    function toggleLang() {
-      currentLang = currentLang === 'tr' ? 'en' : 'tr';
-      document.documentElement.lang = currentLang;
-      document.getElementById('langBtn').textContent = currentLang === 'tr' ? 'EN' : 'TR';
-      document.querySelectorAll('[data-tr]').forEach(el => {
-        const val = el.dataset[currentLang];
-        if (val !== undefined) el.innerHTML = val;
-      });
-    }
   </script>
 
 </body>
