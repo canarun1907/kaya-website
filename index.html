@@ -26,7 +26,13 @@
         <a href="#iletisim" data-tr="İletişim" data-de="Kontakt" data-en="Contact">İletişim</a>
       </nav>
       <div class="navbar-right">
-        <button class="lang-btn" id="langBtn" onclick="toggleLang()">EN</button>
+        <div class="lang-switcher">
+          <button class="lang-opt" id="lang-tr" onclick="setLang('tr')">TR</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-opt" id="lang-en" onclick="setLang('en')">EN</button>
+          <span class="lang-sep">|</span>
+          <button class="lang-opt" id="lang-de" onclick="setLang('de')">DE</button>
+        </div>
         <a href="https://wa.me/905074530787" target="_blank" class="btn-primary nav-cta" data-tr="WhatsApp" data-en="WhatsApp">WhatsApp</a>
         <button class="hamburger" onclick="toggleMenu()">&#9776;</button>
       </div>
@@ -57,7 +63,7 @@
     <div class="container hero-inner">
       <div class="hero-text">
         <span class="hero-badge" data-tr="Alman Grubu Araç Uzmanı" data-de="Experte für deutsche Fahrzeuge" data-en="German Group Vehicle Expert">Alman Grubu Araç Uzmanı</span>
-        <h1 data-tr='Aracınız İçin<br /><span class="highlight"><span id="typing-text"></span><span class="cursor">|</span></span><br />Güvenilir Çözüm' data-en='Reliable Solutions<br /><span class="highlight"><span id="typing-text"></span><span class="cursor">|</span></span><br />For Your Vehicle'>
+        <h1 data-tr='Aracınız İçin<br /><span class="highlight"><span id="typing-text"></span><span class="cursor">|</span></span><br />Güvenilir Çözüm' data-en='Reliable Solutions<br /><span class="highlight"><span id="typing-text"></span><span class="cursor">|</span></span><br />For Your Vehicle' data-de='Zuverlässige Lösung<br /><span class="highlight"><span id="typing-text"></span><span class="cursor">|</span></span><br />Für Ihr Fahrzeug'>
           Aracınız İçin<br /><span class="highlight"><span id="typing-text"></span><span class="cursor">|</span></span><br />Güvenilir Çözüm
         </h1>
         <p data-tr="BMW, Mercedes, Volkswagen ve Alman grubu araçlarda orijinal ve muadil yedek parça temini ile mekanik onarım hizmeti veriyoruz." data-de="Wir liefern Original- und Nachbauteile und bieten mechanische Reparaturleistungen für BMW, Mercedes, Volkswagen und deutsche Fahrzeuge." data-en="We supply original and aftermarket spare parts and provide mechanical repair services for BMW, Mercedes, Volkswagen and German group vehicles.">BMW, Mercedes, Volkswagen ve Alman grubu araçlarda orijinal ve muadil yedek parça temini ile mekanik onarım hizmeti veriyoruz.</p>
@@ -568,18 +574,27 @@
 
     /* ── Dil Değiştirme ── */
     let currentLang = 'tr';
-    const langCycle = { tr: 'en', en: 'de', de: 'tr' };
-    const langLabel = { tr: 'EN', en: 'DE', de: 'TR' };
 
-    function toggleLang() {
-      currentLang = langCycle[currentLang];
-      document.documentElement.lang = currentLang;
-      document.getElementById('langBtn').textContent = langLabel[currentLang];
+    function setLang(lang) {
+      currentLang = lang;
+      document.documentElement.lang = lang;
+      document.querySelectorAll('.lang-opt').forEach(btn => btn.classList.remove('active'));
+      document.getElementById('lang-' + lang).classList.add('active');
       document.querySelectorAll('[data-tr]:not(h1)').forEach(el => {
-        const val = el.dataset[currentLang];
+        const val = el.dataset[lang];
         if (val !== undefined) el.innerHTML = val;
       });
+      const h1 = document.querySelector('h1[data-tr]');
+      if (h1) {
+        const val = h1.dataset[lang];
+        if (val !== undefined) {
+          h1.innerHTML = val;
+          typingEl = document.getElementById('typing-text');
+        }
+      }
     }
+
+    function toggleLang() { setLang(currentLang); }
 
     /* ── Typing Efekti ── */
     const wordSets = {
@@ -588,7 +603,7 @@
       de: ['BMW Teile,', 'Mercedes Teile,', 'VW Teile,', 'Audi Teile,', 'Skoda Teile,']
     };
     let wi = 0, ci = 0, deleting = false;
-    const typingEl = document.getElementById('typing-text');
+    let typingEl = document.getElementById('typing-text');
 
     function type() {
       const words = wordSets[currentLang];
